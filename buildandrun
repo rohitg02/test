@@ -1,0 +1,12 @@
+mpicc -Wall -o dynamic_mpi dynamic_mpi.c error.c mymath.c process_workload.c generate_workload.c
+mpicc -Wall -o static_mpi static_mpi.c error.c mymath.c process_workload.c generate_workload.c
+mpirun -np 3 static_mpi
+mpirun -np 5 static_mpi
+mpirun -np 9 static_mpi
+mpirun -np 17 static_mpi
+mpirun -np 33 static_mpi
+mpirun -np 3 dynamic_mpi
+mpirun -np 5 dynamic_mpi
+mpirun -np 9 dynamic_mpi
+mpirun -np 17 dynamic_mpi
+mpirun -np 33 dynamic_mpi
